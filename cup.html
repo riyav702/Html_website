@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized T-Shirt Order Form</title>
+</head>
+<body>
+    <h1>Place Your Customized T-Shirt Order</h1>
+    <form action="/submit_order" method="post">
+        <fieldset>
+            <legend>T-Shirt Customization</legend>
+
+            <label for="tagline">Tagline on the T-Shirt:</label>
+            <input type="text" id="tagline" name="tagline" placeholder="Enter your tagline" required>
+            <br><br>
+
+            <label for="color">Color:</label>
+            <select id="color" name="color" required>
+                <option value="">Select a color</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+            </select>
+            <br><br>
+
+            <label for="size">Size:</label>
+            <select id="size" name="size" required>
+                <option value="">Select a size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">X-Large</option>
+            </select>
+            <br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" required>
+            <br><br>
+
+            <label for="deliveryDate">Delivery Date:</label>
+            <input type="date" id="deliveryDate" name="deliveryDate" required>
+            <br><br>
+
+            <label>Sample T-Shirt Images:</label>
+            <br>
+            <img src="https://tbhai.com/cdn/shop/products/CustomNameGanjuBabyPapaMummyTShirtsMundanThemeTBhai.jpg?v=1676216259&width=1100" alt="Sample T-Shirt 1" width="150" height="150">
+            <img src="https://digiprintshop.com/wp-content/uploads/2021/12/dps-20d000-t-maroon-03.jpg" alt="Sample T-Shirt 2" width="150" height="150">
+            <img src="https://assets.ajio.com/medias/sys_master/root/20230602/PX12/64792d1842f9e729d70b8f3a/-1117Wx1400H-461378045-multi-MODEL.jpg" alt="Sample T-Shirt 3" width="150" height="150">
+            <br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Delivery Details</legend>
+
+            <label for="name">Recipient's Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter recipient's name" required>
+            <br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter delivery address" required>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter recipient's email" required>
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter recipient's phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <small>Format: 123-456-7890</small>
+            <br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Any additional instructions or comments"></textarea>
+            <br><br>
+        </fieldset>
+
+        <button type="submit">Submit Order</button>
+        <input type="reset" value="Reset Form">
+    </form>
+</body>
+</html>
+
